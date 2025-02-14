@@ -1,0 +1,46 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mait-taj <mait-taj@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/02/04 16:21:52 by mait-taj          #+#    #+#             */
+/*   Updated: 2025/02/13 13:03:52 by mait-taj         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "Fixed.hpp"
+
+const int	Fixed::fracBits = 8;
+
+Fixed::Fixed() : fixedPoint(0) {
+	std::cout << "Default constructor called" << std::endl;
+}
+
+Fixed::Fixed( const Fixed &other ) {
+	std::cout << "Copy constructor called" << std::endl;
+	*this = other;
+};
+
+Fixed&	Fixed::operator = ( const Fixed& src ) {
+	if ( this != &src )
+	{
+		std::cout << "Copy assignment operator called" << std::endl;
+		this->fixedPoint = src.getRawBits();
+	}
+	return (*this);
+}
+
+Fixed::~Fixed() {
+	std::cout << "Destructor called" << std::endl;
+}
+
+int	Fixed::getRawBits( void ) const {
+	std::cout << "getRawBits member function called" << std::endl;
+	return (fixedPoint);
+}
+
+void	Fixed::setRawBits( int const raw ) {
+	this->fixedPoint = raw;
+}
