@@ -8,13 +8,13 @@ SRC = main.cpp Fixed.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
-%.o: %.c
+%.o: %.c	Fixed.hpp Point.hpp
 	$(CC) $(CFLAGS) -cpp $@ -o $<
 
 all:	$(NAME)
 
 $(NAME):	$(OBJ)
-	$(CC) $(CFLAGS) $(SRC)
+	$(CC) $(CFLAGS) $(SRC) -o $(NAME)
 
 clean:
 	rm -f $(OBJ)

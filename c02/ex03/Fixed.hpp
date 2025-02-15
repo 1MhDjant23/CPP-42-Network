@@ -6,7 +6,7 @@
 /*   By: mait-taj <mait-taj@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 17:29:52 by mait-taj          #+#    #+#             */
-/*   Updated: 2025/02/12 13:29:43 by mait-taj         ###   ########.fr       */
+/*   Updated: 2025/02/14 19:02:48 by mait-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 #include <iostream>
 #include <cmath>
-#include "Point.hpp"
 
 class Fixed
 {
