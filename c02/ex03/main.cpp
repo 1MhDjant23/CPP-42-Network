@@ -6,13 +6,18 @@
 /*   By: mait-taj <mait-taj@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 12:21:43 by mait-taj          #+#    #+#             */
-/*   Updated: 2025/02/14 18:55:16 by mait-taj         ###   ########.fr       */
+/*   Updated: 2025/02/15 12:01:18 by mait-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+#include "Point.hpp"
+
+
 
 int	main( void ) {
-	// while
+	Point	a(0, 0), b(10, 30), c(20, 0), p(10, 15);
+	Point::printBolean( bsp( a, b, c, p ) );
+	// bsp()
 	return 0;
 }

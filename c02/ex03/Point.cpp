@@ -6,7 +6,7 @@
 /*   By: mait-taj <mait-taj@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 15:27:55 by mait-taj          #+#    #+#             */
-/*   Updated: 2025/02/14 21:49:50 by mait-taj         ###   ########.fr       */
+/*   Updated: 2025/02/15 12:06:36 by mait-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,10 @@ Point&	Point::operator=( const Point& obj ) {
 	return *this;
 }
 
-Fixed&	Point::getFirstFixedPoint( void ) const{
+const Fixed&	Point::getFirstFixedPoint( void ) const{
 	return this->x;
 }
-Fixed&	Point::getSecondFixedPoint( void ) const{
+const Fixed&	Point::getSecondFixedPoint( void ) const{
 	return this->y;
 }
 
@@ -47,4 +47,11 @@ Fixed	Point::calculateArea( const Point& a, const Point& b, const Point& c ) {
 	if (area < 0)
 		return (area * -1);
 	return area;
+}
+
+void	Point::printBolean( bool stat ) {
+	if ( stat == true )
+		std::cout << "the point is inside the triangle." << std::endl;
+	else
+		std::cout << "the point is a vertex or on edge." << std::endl;
 }
