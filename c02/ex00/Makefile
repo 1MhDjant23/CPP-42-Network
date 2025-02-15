@@ -9,7 +9,7 @@ SRC = main.cpp Fixed.cpp
 OBJ = $(SRC:.cpp=.o)
 
 %.o: %.cpp
-	$(CC) $(CFLAGS) -c $< -o$@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 all:	$(NAME)
 
