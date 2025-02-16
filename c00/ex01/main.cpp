@@ -6,7 +6,7 @@
 /*   By: mait-taj <mait-taj@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 15:56:44 by mait-taj          #+#    #+#             */
-/*   Updated: 2025/02/16 09:18:57 by mait-taj         ###   ########.fr       */
+/*   Updated: 2025/02/16 09:21:43 by mait-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ int	main()
 {
 	PhoneBook	my_book;
 	std::string	user;
-
 	int	index = 0;
 	while ( true )
 	{
