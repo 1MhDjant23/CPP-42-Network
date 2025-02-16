@@ -6,11 +6,17 @@
 /*   By: mait-taj <mait-taj@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 15:56:44 by mait-taj          #+#    #+#             */
-/*   Updated: 2025/02/10 09:27:24 by mait-taj         ###   ########.fr       */
+/*   Updated: 2025/02/16 09:18:57 by mait-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
+
+std::string	parseInput( std::string& str ) {
+	std::size_t	posLeft = str.find_first_not_of( " \t" );
+	std::size_t	posRight = str.find_last_not_of( " \n" );
+	return (( posLeft == std::string::npos && posRight == std::string::npos ) ? "" : str.substr( posLeft, posRight - posLeft + 1 ));
+}
 
 int	main()
 {
@@ -21,12 +27,13 @@ int	main()
 	while ( true )
 	{
 		std::cout << "\n Enter one of the following command:\n"
-			<< "\n* ADD (to save a new contact).\n"
-			<< "* SEARCH (to display saved contacts).\n"
-			<< "* EXIT (to quit program).\n>";
+			<< "\n* ADD 				( to save a new contact ).\n"
+			<< "* SEARCH 			( to display saved contacts ).\n"
+			<< "* EXIT 				( to quit program ).\n>";
 		if ( !getline(std::cin, user) )
 			exit(EXIT_FAILURE) ;
-		if ( user == "ADD")
+		user = parseInput( user );
+		if ( user == "ADD" )
 		{
 			if ( index >= 8 )
 				index = 0;

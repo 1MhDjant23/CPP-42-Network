@@ -6,7 +6,7 @@
 /*   By: mait-taj <mait-taj@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 20:50:29 by mait-taj          #+#    #+#             */
-/*   Updated: 2025/02/10 10:44:27 by mait-taj         ###   ########.fr       */
+/*   Updated: 2025/02/16 09:05:50 by mait-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,18 +83,18 @@ void	PhoneBook::display_all_contacts()
 }
 void	PhoneBook::display_specific_contact( int index )
 {
-	if ( index < 1 && index > 8  )
+	if ( index < 1 || index > 8  )
 		std::cout << "Index is out of range {1,8}" << std::endl;
 	else
 	{
-		if ( arr[ index ].get_contact_info( FIRST_NAME ).length() == 0 ) {
-			std::cout << "\nContact `" << index + 1 << "` not found!"<< std::endl; 
+		if ( arr[ index - 1 ].get_contact_info( FIRST_NAME ).length() == 0 ) {
+			std::cout << "\nContact `" << index << "` not found!"<< std::endl; 
 			return ;
 		}
-		std::cout << arr[ index ].get_contact_info( FIRST_NAME ) << std::endl;
-		std::cout << arr[ index ].get_contact_info( LAST_NAME ) << std::endl;
-		std::cout << arr[ index ].get_contact_info( NICKNAME ) << std::endl;
-		std::cout << arr[ index ].get_contact_info( PHONE_NUMBER ) << std::endl;
-		std::cout << arr[ index ].get_contact_info( DARKEST_SECRET ) << std::endl;
+		std::cout << arr[ index - 1 ].get_contact_info( FIRST_NAME ) << std::endl;
+		std::cout << arr[ index - 1 ].get_contact_info( LAST_NAME ) << std::endl;
+		std::cout << arr[ index - 1 ].get_contact_info( NICKNAME ) << std::endl;
+		std::cout << arr[ index - 1 ].get_contact_info( PHONE_NUMBER ) << std::endl;
+		std::cout << arr[ index - 1 ].get_contact_info( DARKEST_SECRET ) << std::endl;
 	}
 }
