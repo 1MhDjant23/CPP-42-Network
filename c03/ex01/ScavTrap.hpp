@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mait-taj <mait-taj@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/24 11:32:17 by mait-taj          #+#    #+#             */
-/*   Updated: 2025/02/05 11:10:05 by mait-taj         ###   ########.fr       */
+/*   Created: 2025/02/21 16:21:00 by mait-taj          #+#    #+#             */
+/*   Updated: 2025/02/22 19:03:35 by mait-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <cctype>
+#ifndef	SCAVTRAP_HPP
+#define	SCAVTRAP_HPP
 
-int	main(int ac, char **av)
-{
-	int	i;
-	int	j;
+#include "ClapTrap.hpp"
 
-	if (ac < 2) {
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-		exit(EXIT_SUCCESS);
-	}
-	i = 1;
-	while (av[i])
-	{
-		j = 0;
-		while (av[i][j])
-			std::cout << static_cast<char>(std::toupper(av[i][j++]));
-		i++;
-	}
-	std::cout << std::endl;
-	return (0);
-}
+class ScavTrap : public ClapTrap {
+	public:
+		ScavTrap();
+		ScavTrap( std::string name );
+		~ScavTrap();
+		void	guardGate();
+		void	attack( const std::string& target );
+	
+};
+
+#endif

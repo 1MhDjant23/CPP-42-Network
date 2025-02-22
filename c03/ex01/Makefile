@@ -1,25 +1,25 @@
-NAME = phoneBook
+NAME = ClapTrap
 
 CC = c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = main.cpp Contact.cpp PhoneBook.cpp
+SRC = main.cpp ClapTrap.cpp	ScavTrap.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
-all: $(NAME)
-
-%.o: %.cpp	PhoneBook.hpp Contact.hpp
+%.o: %.c ClapTrap.hpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(NAME): $(OBJ)
+all:	$(NAME)
+
+$(NAME):	$(OBJ)
 	$(CC) $(CFLAGS) $(SRC) -o $(NAME)
 
 clean:
 	rm -f $(OBJ)
 
-fclean: clean
+fclean:	clean
 	rm -f $(NAME)
 
-re: fclean all
+re:	fclean all

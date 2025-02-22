@@ -6,7 +6,7 @@
 /*   By: mait-taj <mait-taj@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 11:18:11 by mait-taj          #+#    #+#             */
-/*   Updated: 2025/01/26 13:32:53 by mait-taj         ###   ########.fr       */
+/*   Updated: 2025/02/17 13:55:37 by mait-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Zombie* newZombie( std::string name )
 {
+	
 	Zombie *Z = new Zombie( name );
 	return ( Z );
 }

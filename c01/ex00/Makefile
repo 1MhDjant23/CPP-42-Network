@@ -13,7 +13,7 @@ all:	$(NAME)
 %.o:%.cpp	Zombie.hpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(NAME):	Zombie.hpp $(OBJ)
+$(NAME):	$(OBJ)
 	$(CC) $(CFLAGS) $(SRC) -o $(NAME)
 
 clean:
