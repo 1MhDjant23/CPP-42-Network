@@ -1,4 +1,4 @@
-NAME = ClapTrap
+NAME = ScavTrap
 
 CC = c++
 
@@ -8,7 +8,7 @@ SRC = main.cpp ClapTrap.cpp	ScavTrap.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
-%.o: %.c ClapTrap.hpp
+%.o: %.c ClapTrap.hpp ScavTrap.hpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
 all:	$(NAME)

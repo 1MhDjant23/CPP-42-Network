@@ -6,7 +6,7 @@
 /*   By: mait-taj <mait-taj@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 11:36:02 by mait-taj          #+#    #+#             */
-/*   Updated: 2025/02/22 19:36:56 by mait-taj         ###   ########.fr       */
+/*   Updated: 2025/02/23 21:48:17 by mait-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,22 @@
 #include "ScavTrap.hpp"
 int main( void )
 {
-	ClapTrap*	clap1;
+	// ClapTrap*	clap1;
 	// ClapTrap	clap2("NRC");
-	ScavTrap	scav1;
-	// ScavTrap	scav22("LALALALAL");
-
-	clap1 = &scav1;
+	ClapTrap	*calp ;
+	calp = new ScavTrap();
+	calp->attack("test");
+	delete calp;
+	// ScavTrap	scav2;
+	std::cout << "scavtrap now" << std::endl;
+	ScavTrap	scav22("LALALALAL");
+	// scav1.displayStatus();
+	// clap1 = &scav1;
 	// scav1.attack("SIMOO");
 	// scav1.displayStatus();
 	// scav1.guardGate();
 	// scav1.attack("NFC");
-	clap1->displayStatus();
+	// clap1->displayStatus();
 	// clap1.attack("NIKI");
 	// clap1.attack("MAXI");
 	// clap1.attack("MOI");
