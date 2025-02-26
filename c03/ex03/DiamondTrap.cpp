@@ -16,6 +16,7 @@ DiamondTrap::DiamondTrap() {}
 
 DiamondTrap::DiamondTrap( std::string name ) : FragTrap( name + "_clap_name" ), Name(name) {
 	// ClapTrap::Name = name + "_clap_name";
+	std::cout << "DiamondTrap " << this->Name << " starting it's operation" << std::endl;
 }
 
 void	DiamondTrap::whoAmI() {

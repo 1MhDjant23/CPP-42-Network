@@ -16,7 +16,7 @@ ScavTrap::ScavTrap() : ClapTrap("Scav") {
 	this->hitPoints = 100;
 	this->energyPoints = 50;
 	this->attackDamage = 20;
-	std::cout << this->Name << " One ScavTrap is in the process of starting..." << std::endl;
+	std::cout << "ScavTrap " << this->Name << " is in the process of starting..." << std::endl;
 }
 
 ScavTrap::ScavTrap( std::string name ) : ClapTrap(name) {
