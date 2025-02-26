@@ -49,3 +49,9 @@ ScavTrap&	ScavTrap::operator=( const ScavTrap& other ) {
 	std::cout << "{ScavTrap copy assignment operator called}" << std::endl;
 	return *this;
 }
+
+ScavTrap::displayStatus( void ) {
+	std::cout << "ScavTrap " << this->Name
+			  << " take " << this->attackDamage << " of damage , total hit-points: " << this->hitPoints
+			  << ", total energy-points: " << this->energyPoints << std::endl;
+}

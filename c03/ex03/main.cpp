@@ -18,6 +18,7 @@
 int main( void )
 {
 	DiamondTrap	diam("MOND");
+	diam.attack("NRC");
 	// FragTrap	fr1("NFC");
 	// ClapTrap	*clapPtr ;
 	// clapPtr = &fr1;

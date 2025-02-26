@@ -14,8 +14,8 @@
 
 DiamondTrap::DiamondTrap() {}
 
-DiamondTrap::DiamondTrap( std::string name ) : FragTrap( name + "_clap_name" ), Name(name) {
-	// ClapTrap::Name = name + "_clap_name";
+DiamondTrap::DiamondTrap( std::string name ) : ClapTrap(name + "_clap_name"), Name(name) {
+	this->attackDamage = 1222;
 	std::cout << "DiamondTrap " << this->Name << " starting it's operation" << std::endl;
 }
 
