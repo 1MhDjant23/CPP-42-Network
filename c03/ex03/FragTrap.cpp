@@ -6,20 +6,24 @@
 /*   By: mait-taj <mait-taj@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 13:26:31 by mait-taj          #+#    #+#             */
-/*   Updated: 2025/02/25 19:13:02 by mait-taj         ###   ########.fr       */
+/*   Updated: 2025/02/27 13:44:12 by mait-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap() : ClapTrap("FragTrap") {
+FragTrap::FragTrap() :
+		ClapTrap("FragClap")
+{
 	this->hitPoints = 100;
 	this->energyPoints = 100;
 	this->attackDamage = 30;
-	std::cout << "There is a FragTrap that is about to begin." << std::endl;
+	std::cout << "FragTrap " << this->Name << " is about to begin." << std::endl;
 }
 
-FragTrap::FragTrap( std::string name ) : ClapTrap( name ){
+FragTrap::FragTrap( std::string name ) :
+		ClapTrap( name )
+{
 	this->hitPoints = 100;
 	this->energyPoints = 100;
 	this->attackDamage = 30;

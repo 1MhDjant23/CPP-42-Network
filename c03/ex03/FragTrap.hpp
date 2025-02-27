@@ -6,7 +6,7 @@
 /*   By: mait-taj <mait-taj@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 13:24:06 by mait-taj          #+#    #+#             */
-/*   Updated: 2025/02/25 16:29:40 by mait-taj         ###   ########.fr       */
+/*   Updated: 2025/02/27 13:21:07 by mait-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class	FragTrap : virtual public ClapTrap {
 		FragTrap( std::string name );
 		FragTrap( const FragTrap& other );
 		FragTrap&	operator=( const FragTrap& other );
-		~FragTrap();
+		virtual	~FragTrap();
 		void	highFivesGuys(void);
 };
 

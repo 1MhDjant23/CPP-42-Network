@@ -6,7 +6,7 @@
 /*   By: mait-taj <mait-taj@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 10:40:06 by mait-taj          #+#    #+#             */
-/*   Updated: 2025/02/25 13:18:19 by mait-taj         ###   ########.fr       */
+/*   Updated: 2025/02/27 13:29:58 by mait-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,10 +48,4 @@ ScavTrap&	ScavTrap::operator=( const ScavTrap& other ) {
 	}
 	std::cout << "{ScavTrap copy assignment operator called}" << std::endl;
 	return *this;
-}
-
-ScavTrap::displayStatus( void ) {
-	std::cout << "ScavTrap " << this->Name
-			  << " take " << this->attackDamage << " of damage , total hit-points: " << this->hitPoints
-			  << ", total energy-points: " << this->energyPoints << std::endl;
 }

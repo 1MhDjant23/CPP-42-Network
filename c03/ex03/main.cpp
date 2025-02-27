@@ -6,7 +6,7 @@
 /*   By: mait-taj <mait-taj@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 11:36:02 by mait-taj          #+#    #+#             */
-/*   Updated: 2025/02/26 11:30:12 by mait-taj         ###   ########.fr       */
+/*   Updated: 2025/02/27 13:37:29 by mait-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,10 @@
 
 int main( void )
 {
-	DiamondTrap	diam("MOND");
+	DiamondTrap	diam("DJANTMOH");
 	diam.attack("NRC");
+	diam.displayStatus();
+	diam.whoAmI();
 	// FragTrap	fr1("NFC");
 	// ClapTrap	*clapPtr ;
 	// clapPtr = &fr1;
