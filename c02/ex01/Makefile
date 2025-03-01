@@ -14,7 +14,7 @@ OBJ = $(SRC:.cpp=.o)
 all:	$(NAME)
 
 $(NAME):	$(OBJ)
-	$(CC) $(CFLAGS) $(SRC)
+	$(CC) $(CFLAGS) $(SRC) -o $(NAME)
 
 clean:
 	rm -f $(OBJ)

@@ -6,16 +6,17 @@
 /*   By: mait-taj <mait-taj@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 09:30:19 by mait-taj          #+#    #+#             */
-/*   Updated: 2025/02/27 13:36:43 by mait-taj         ###   ########.fr       */
+/*   Updated: 2025/02/27 13:48:07 by mait-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
 DiamondTrap::DiamondTrap() :
-			ClapTrap("Diamond_clap_name"),
+			ClapTrap( "Diamond_clap_name" ),
 			ScavTrap(),
-			FragTrap()
+			FragTrap(),
+			Name("DJANT")
 {
 	this->energyPoints = 50;
 	std::cout << "DiamondTrap starting it's operation" << std::endl;
