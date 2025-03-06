@@ -6,7 +6,7 @@
 /*   By: mait-taj <mait-taj@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 17:07:11 by mait-taj          #+#    #+#             */
-/*   Updated: 2025/02/14 10:41:20 by mait-taj         ###   ########.fr       */
+/*   Updated: 2025/03/06 17:47:24 by mait-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,12 +56,12 @@ std::ostream&	operator<<( std::ostream& os, const Fixed& obj ) {
 	return os;
 }
 /*	____________comparison operators____________		*/
-bool	Fixed::operator<( const Fixed& rightObj ) {
+bool	Fixed::operator<( const Fixed& rightObj ) const {
 	if ( this->getRawBits() < rightObj.getRawBits() )
 		return true;
 	return false;
 }
-bool	Fixed::operator>( const Fixed& rightObj ) {
+bool	Fixed::operator>( const Fixed& rightObj ) const {
 	if (this->getRawBits() > rightObj.getRawBits())
 		return true;
 	return false;
@@ -108,11 +108,11 @@ Fixed	Fixed::operator/( const Fixed& rightObj ) {
 
 **	__________(pre-increment and pre-decrement ) ________	*/
 
-Fixed&	Fixed::operator++() {
+Fixed&	Fixed::operator++( void ) {
 	setRawBits( fixedPoint + 1 );
 	return *this;
 }
-Fixed&	Fixed::operator--() {
+Fixed&	Fixed::operator--( void ) {
 	setRawBits( fixedPoint - 1 );
 	return *this;
 }
@@ -130,24 +130,24 @@ Fixed	Fixed::operator--( int ) {
 /*	___________	max && min Fixed-point	___________			*/
 
 Fixed&	Fixed::min( Fixed& fix1, Fixed& fix2 ) {
-	if ( fix1.fixedPoint < fix2.fixedPoint )
+	if ( fix1 < fix2 )
 		return fix1;
 	return fix2;	
 }
 
 const Fixed&	Fixed::min( const Fixed& fix1, const Fixed& fix2 ) {
-	if ( fix1.fixedPoint < fix2.fixedPoint )
+	if ( fix1 < fix2 )
 		return fix1;
 	return fix2;
 }
 Fixed&	Fixed::max( Fixed& fix1, Fixed& fix2 ) {
-	if ( fix1.fixedPoint > fix2.fixedPoint )
+	if ( fix1 > fix2 )
 		return fix1;
 	return fix2;
 }
 
 const Fixed&	Fixed::max( const Fixed& fix1, const Fixed& fix2 ) {
-	if ( fix1.fixedPoint > fix2.fixedPoint )
+	if ( fix1 > fix2 )
 		return fix1;
 	return fix2;
 }

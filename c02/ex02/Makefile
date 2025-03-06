@@ -9,12 +9,12 @@ SRC = main.cpp Fixed.cpp
 OBJ = $(SRC:.cpp=.o)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -cpp $@ -o $<
+	$(CC) $(CFLAGS) -c $< -o $@
 
 all:	$(NAME)
 
 $(NAME):	$(OBJ)
-	$(CC) $(CFLAGS) $(SRC)
+	$(CC) $(CFLAGS) $(SRC) -o $(NAME)
 
 clean:
 	rm -f $(OBJ)

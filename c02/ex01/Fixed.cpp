@@ -6,7 +6,7 @@
 /*   By: mait-taj <mait-taj@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 17:07:11 by mait-taj          #+#    #+#             */
-/*   Updated: 2025/02/14 10:39:27 by mait-taj         ###   ########.fr       */
+/*   Updated: 2025/03/06 16:01:35 by mait-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ Fixed::Fixed( const float point ) : fixedPoint( static_cast<int>( roundf( point 
 }
 
 float	Fixed::toFloat( void ) const {
-	return ( static_cast<float>(fixedPoint) / ( 1 << fracBits ) );
+	return ( static_cast<float>( this->fixedPoint ) / ( 1 << fracBits ) );
 }
 
 int	Fixed::toInt( void ) const {

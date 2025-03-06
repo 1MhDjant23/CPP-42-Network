@@ -6,7 +6,7 @@
 /*   By: mait-taj <mait-taj@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 11:42:28 by mait-taj          #+#    #+#             */
-/*   Updated: 2025/02/28 18:19:02 by mait-taj         ###   ########.fr       */
+/*   Updated: 2025/03/06 17:27:56 by mait-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,5 @@ int main( void ) {
 	std::cout << "b is " << b.toInt() << " as integer" << std::endl;
 	std::cout << "c is " << c.toInt() << " as integer" << std::endl;
 	std::cout << "d is " << d.toInt() << " as integer" << std::endl;
-	// Fixed a(4.5f);
-	// std::cout << a.toInt() << std::endl;
 	return 0;
 }
