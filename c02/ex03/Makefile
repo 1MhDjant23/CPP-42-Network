@@ -9,7 +9,7 @@ SRC = main.cpp Fixed.cpp bsp.cpp Point.cpp
 OBJ = $(SRC:.cpp=.o)
 
 %.o: %.c	Fixed.hpp Point.hpp
-	$(CC) $(CFLAGS) -cpp $@ -o $<
+	$(CC) $(CFLAGS) -c $< -o $@
 
 all:	$(NAME)
 

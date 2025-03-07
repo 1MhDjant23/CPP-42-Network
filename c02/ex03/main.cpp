@@ -6,7 +6,7 @@
 /*   By: mait-taj <mait-taj@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 12:21:43 by mait-taj          #+#    #+#             */
-/*   Updated: 2025/02/15 12:01:18 by mait-taj         ###   ########.fr       */
+/*   Updated: 2025/03/07 21:40:32 by mait-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,15 @@
 
 
 int	main( void ) {
-	Point	a(0, 0), b(10, 30), c(20, 0), p(10, 15);
-	Point::printBolean( bsp( a, b, c, p ) );
+	Point	a(0, 0);
+	Point	b(10 , 30);
+	Point	c(20 , 0);
+
+	Point	xx(10, 15);
+	Point	yy(6 , 2);
+// A = (0, 0), B = (10, 30), C = (20, 0), P(10, 15)
+	// Point	a(0, 0), b(10, 30), c(20, 0), p(10, 15);
+	Point::printBolean( bsp( a, b, c, xx ) );
 	// bsp()
 	return 0;
 }
