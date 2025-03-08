@@ -6,7 +6,7 @@
 /*   By: mait-taj <mait-taj@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 12:21:43 by mait-taj          #+#    #+#             */
-/*   Updated: 2025/03/07 21:40:32 by mait-taj         ###   ########.fr       */
+/*   Updated: 2025/03/08 17:57:53 by mait-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,36 @@
 
 
 int	main( void ) {
-	Point	a(0, 0);
-	Point	b(10 , 30);
-	Point	c(20 , 0);
-
-	Point	xx(10, 15);
-	Point	yy(6 , 2);
-// A = (0, 0), B = (10, 30), C = (20, 0), P(10, 15)
-	// Point	a(0, 0), b(10, 30), c(20, 0), p(10, 15);
-	Point::printBolean( bsp( a, b, c, xx ) );
-	// bsp()
+	{
+		Point	a(0, 0);
+		Point	b(10 , 30);
+		Point	c(20 , 0);
+		Point	P1(10, 15);//this Point inside triangle.
+		Point::printBolean( bsp( a, b, c, P1 ), "P1" );
+	}
+	std::cout << "____________________________________________\n" << std::endl;
+	{
+		Point	a(0, 0);
+		Point	b(10 , 30);
+		Point	c(20 , 0);
+		Point	P2(30, 15);//this Point Outside triangle.
+		Point::printBolean( bsp( a, b, c, P2 ), "P2");
+	}
+	std::cout << "____________________________________________\n" << std::endl;
+	{
+		Point	a(1, 8);
+		Point	b(10 , 12);
+		Point	c(11 , 5);
+		Point	P3(4, 8);//this Point Inside triangle.
+		Point::printBolean( bsp( a, b, c, P3 ), "P3");
+	}
+	std::cout << "____________________________________________\n" << std::endl;
+	{
+		Point	a(5, 5);
+		Point	b(4 , 6);
+		Point	c(2 , 2);
+		Point	P4(1, 1);//this Point Outside triangle.
+		Point::printBolean( bsp( a, b, c, P4 ), "P4");
+	}
 	return 0;
 }

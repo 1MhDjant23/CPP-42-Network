@@ -6,7 +6,7 @@
 /*   By: mait-taj <mait-taj@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 17:07:11 by mait-taj          #+#    #+#             */
-/*   Updated: 2025/02/14 18:58:07 by mait-taj         ###   ########.fr       */
+/*   Updated: 2025/03/08 22:55:58 by mait-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Fixed::Fixed() : fixedPoint(0) { }
 
 Fixed::Fixed( const Fixed &other ) {
 	this->fixedPoint = other.getRawBits();
-};
+}
 
 Fixed&	Fixed::operator=( const Fixed& newObj ) {
 	if ( this != &newObj )
