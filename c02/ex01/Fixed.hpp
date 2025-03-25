@@ -6,7 +6,7 @@
 /*   By: mait-taj <mait-taj@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 17:29:52 by mait-taj          #+#    #+#             */
-/*   Updated: 2025/03/05 14:01:56 by mait-taj         ###   ########.fr       */
+/*   Updated: 2025/03/08 22:43:18 by mait-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,13 @@ private:
 	static const int	fracBits;
 public:
 	Fixed& operator=( const Fixed& newObj );//original one
+	Fixed( const Fixed &other );// original one
+	int 	getRawBits( void ) const;//original one
+	void 	setRawBits( int const raw );//original one
 	Fixed();
 	Fixed( const int num );
 	Fixed( const float point );
-	Fixed( const Fixed &other );// original one
 	~Fixed();
-	int 	getRawBits( void ) const;//original one
-	void 	setRawBits( int const raw );//original one
 	float	toFloat( void ) const;
 	int		toInt( void ) const;
 };

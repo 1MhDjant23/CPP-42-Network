@@ -6,7 +6,7 @@
 /*   By: mait-taj <mait-taj@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 17:07:11 by mait-taj          #+#    #+#             */
-/*   Updated: 2025/03/06 17:47:24 by mait-taj         ###   ########.fr       */
+/*   Updated: 2025/03/10 15:52:57 by mait-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Fixed::Fixed( const Fixed &other ) {
 
 Fixed&	Fixed::operator=( const Fixed& newObj ) {
 	if ( this != &newObj )
-		this->fixedPoint = newObj.getRawBits();
+		this->fixedPoint = newObj.fixedPoint;
 	return (*this);
 }
 
@@ -98,11 +98,13 @@ Fixed	Fixed::operator-( const Fixed& rightObj ) {
 }
 
 Fixed	Fixed::operator*( const Fixed& rightObj ) {
-	return Fixed( this->toFloat() * rightObj.toFloat() );
+	float  mult = static_cast<float>(this->fixedPoint) * (rightObj.fixedPoint) / (1 << fracBits * 2);
+	return  Fixed(mult);
 }
 
 Fixed	Fixed::operator/( const Fixed& rightObj ) {
-	return Fixed( this->toFloat() / rightObj.toFloat() );
+	float div = (this->fixedPoint) / (rightObj.fixedPoint) * (1 << fracBits * 2);
+	return Fixed(div);
 }
 /*	__________________	The 4 increment/decrement	________________
 
