@@ -6,7 +6,7 @@
 /*   By: mait-taj <mait-taj@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 21:48:36 by mait-taj          #+#    #+#             */
-/*   Updated: 2025/03/20 22:06:23 by mait-taj         ###   ########.fr       */
+/*   Updated: 2025/03/25 21:53:37 by mait-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ ClapTrap::ClapTrap( void ) : Name(""), HitPoints(10), EnergyPoints(10), AttackDa
 	std::cout << "One ClapTrap about to start ..." << std::endl;
 }
 
-ClapTrap::ClapTrap( const std::string& name ) : Name(name){
+ClapTrap::ClapTrap( const std::string& name ) : Name(name), {
+	std::cout << "Claptrap " << this->Name << " about to start ..." << std::endl;
 	
 }
 

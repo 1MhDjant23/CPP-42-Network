@@ -6,7 +6,7 @@
 /*   By: mait-taj <mait-taj@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 16:21:00 by mait-taj          #+#    #+#             */
-/*   Updated: 2025/02/22 19:03:35 by mait-taj         ###   ########.fr       */
+/*   Updated: 2025/03/26 21:50:10 by mait-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ class ScavTrap : public ClapTrap {
 		~ScavTrap();
 		void	guardGate();
 		void	attack( const std::string& target );
-	
 };
 
 #endif

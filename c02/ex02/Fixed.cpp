@@ -6,7 +6,7 @@
 /*   By: mait-taj <mait-taj@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 17:07:11 by mait-taj          #+#    #+#             */
-/*   Updated: 2025/03/10 15:52:57 by mait-taj         ###   ########.fr       */
+/*   Updated: 2025/03/26 18:29:42 by mait-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,32 @@
 
 const int	Fixed::fracBits = 8;
 
-Fixed::Fixed() : fixedPoint(0) { }
+Fixed::Fixed() : fixedPoint(0) { 
+	std::cout << "Default constructor called" << std::endl;
 
-Fixed::~Fixed() { }
+}
+
+Fixed::~Fixed() { 
+	std::cout << "Destructor called" << std::endl;
+
+}
 
 Fixed::Fixed( const Fixed &other ) {
+	std::cout << "Copy constructor called" << std::endl;
 	*this = other;
 };
 
 Fixed&	Fixed::operator=( const Fixed& newObj ) {
+	std::cout << "Copy assignment operator called" << std::endl;
+
 	if ( this != &newObj )
 		this->fixedPoint = newObj.fixedPoint;
 	return (*this);
 }
 
 int	Fixed::getRawBits( void ) const {
+	std::cout << "getRawBits member function called" << std::endl;
+
 	return (this->fixedPoint);
 }
 
@@ -38,6 +49,8 @@ void	Fixed::setRawBits( int const raw ) {
 /*	other member	*/
 
 Fixed::Fixed( const int num ) : fixedPoint( num << fracBits ) {
+	std::cout << "parametrized constructor called" << std::endl;
+
 }
 
 Fixed::Fixed( const float point ) : fixedPoint( static_cast<int>( roundf( point * ( 1 << fracBits )) ) ) {
@@ -48,6 +61,7 @@ float	Fixed::toFloat( void ) const {
 }
 
 int	Fixed::toInt( void ) const {
+	
 	return ( this->fixedPoint >> fracBits );
 }
 

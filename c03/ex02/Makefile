@@ -10,7 +10,7 @@ SRC = main.cpp ClapTrap.cpp FragTrap.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
-%.o: %.c  $(HDR)
+%.o: %.cpp  $(HDR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 all: $(NAME)

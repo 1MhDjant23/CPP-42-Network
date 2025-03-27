@@ -6,13 +6,13 @@
 /*   By: mait-taj <mait-taj@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 15:45:04 by mait-taj          #+#    #+#             */
-/*   Updated: 2025/02/21 11:23:00 by mait-taj         ###   ########.fr       */
+/*   Updated: 2025/03/26 12:09:08 by mait-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap() : Name("Djant"), hitPoints(10), energyPoints(10), attackDamage(0) {
+ClapTrap::ClapTrap() : Name("def"), hitPoints(10), energyPoints(10), attackDamage(0) {
 	std::cout << "One ClapTrap about to start ..." << std::endl;
 }
 
@@ -64,7 +64,6 @@ void	ClapTrap::beRepaired( unsigned int amount ) {
 	std::cout << this->Name << " gets " << amount << " hit points back, " << "Lost one energy; total energy: " <<
 		this->energyPoints << ", total hit-point: " << this->hitPoints << std::endl;
 }
-
 
 void	ClapTrap::displayStatus( void ) {
 	std::cout << "ClapTrap " << this->Name
